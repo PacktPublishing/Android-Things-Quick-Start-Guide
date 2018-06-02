@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/RainbowHAT" />
+            <option value="$PROJECT_DIR$/android-ui" />
+            <option value="$PROJECT_DIR$/commandsecureserver" />
+            <option value="$PROJECT_DIR$/gpiosamples" />
+            <option value="$PROJECT_DIR$/i2csamples" />
+            <option value="$PROJECT_DIR$/pwmsamples" />
+            <option value="$PROJECT_DIR$/spisamples" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

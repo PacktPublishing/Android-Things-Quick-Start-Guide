@@ -1,0 +1,1 @@
+include ':RainbowHAT', ':gpiosamples', ':i2csamples', ':pwmsamples', ':spisamples', ':android-ui', 'commandsecureserver'
