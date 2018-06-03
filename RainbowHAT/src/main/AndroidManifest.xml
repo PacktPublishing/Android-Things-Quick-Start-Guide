@@ -9,7 +9,7 @@
     <application>
         <uses-library android:name="com.google.android.things" />
 
-        <activity android:name=".PianoActivity">
+        <activity android:name=".buzzer.PianoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.plattysoft.androidthingssamples
+package com.plattysoft.androidthingssamples.buzzer
 
 import android.app.Activity
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.KeyEvent.*
 import com.google.android.things.contrib.driver.button.ButtonInputDriver
 import com.google.android.things.contrib.driver.pwmspeaker.Speaker
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
-import com.google.android.things.pio.Gpio
 
 /**
  * Created by Raul Portales on 29/04/18.
