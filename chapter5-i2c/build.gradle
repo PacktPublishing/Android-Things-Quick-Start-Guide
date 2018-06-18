@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 27
+
+
+    defaultConfig {
+        applicationId "com.plattysoft.i2csamples"
+        minSdkVersion 27
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compileOnly 'com.google.android.things:androidthings:+'
+
+    implementation 'com.google.android.things.contrib:driver-ht16k33:+'
+    implementation 'com.google.android.things.contrib:driver-bmx280:+'
+    implementation 'com.google.android.things.contrib:driver-ssd1306:+'
+    implementation 'com.google.android.things.contrib:driver-button:+'
+
+    implementation 'com.nilhcem.androidthings:driver-lcd-pcf8574:+'
+
+    implementation 'com.plattysoft.things:pcf8591:+'
+    implementation 'com.plattysoft.things:adxl345:+'
+    implementation 'com.plattysoft.things:mpu6050:+'
+    implementation 'com.plattysoft.things:pca9685:+'
+
+    implementation(group: 'com.plattysoft.things', name: 'hmc5883l', version: '1.0.0', ext: 'aar', classifier: '')
+
+    implementation 'com.android.support:support-annotations:25.3.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
