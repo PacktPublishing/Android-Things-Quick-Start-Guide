@@ -11,7 +11,7 @@ import kotlin.concurrent.timerTask
 
 class LedMatrixActivity : Activity() {
 
-    private val SPI_BUS: String = "SPI0.1"
+    private val SPI_BUS: String = BoardDefaults.spiHatBus
 
     private var currentSprite = 0
     val sprites = arrayOf(

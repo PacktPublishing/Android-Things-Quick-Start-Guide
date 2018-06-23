@@ -12,5 +12,11 @@ object BoardDefaults {
             DEVICE_IMX7D_PICO -> "SPI3.1"
             else -> throw IllegalStateException("Unknown Build.DEVICE ${Build.DEVICE}")
         }
+    val spiHatBus: String
+        get() = when (Build.DEVICE) {
+            DEVICE_RPI3 -> "SPI0.1"
+            DEVICE_IMX7D_PICO -> "SPI3.0"
+            else -> throw IllegalStateException("Unknown Build.DEVICE ${Build.DEVICE}")
+        }
 }
 
