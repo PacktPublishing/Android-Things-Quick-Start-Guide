@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">api-mobile</string>
+    <string name="temperature">Temperature:</string>
+    <string name="red_led">Red LED</string>
+</resources>

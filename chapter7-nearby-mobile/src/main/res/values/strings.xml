@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">nearby-mobile</string>
+    <string name="red_led">Red LED</string>
+    <string name="temperature">Temperature:</string>
+</resources>
