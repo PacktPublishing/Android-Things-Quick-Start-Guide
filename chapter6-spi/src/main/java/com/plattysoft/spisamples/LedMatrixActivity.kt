@@ -2,10 +2,7 @@ package com.plattysoft.spisamples
 
 import android.app.Activity
 import android.os.Bundle
-import android.util.Log
-import com.google.android.things.pio.PeripheralManager
 import com.nilhcem.androidthings.driver.max72xx.LedControl
-import java.io.IOException
 import java.util.*
 import kotlin.concurrent.timerTask
 
@@ -45,7 +42,7 @@ class LedMatrixActivity : Activity() {
         ledControl = LedControl(SPI_BUS, 1) // second parameter is the number of chained matrices. Here, we only use 1 LED matrix module (8x8).
         initLedMatrix()
         timer.schedule(timerTask {
-            swapSpite()
+            swapSprite()
         }, 1000, 1000)
     }
 
@@ -64,7 +61,7 @@ class LedMatrixActivity : Activity() {
         ledControl.close()
     }
 
-    private fun swapSpite() {
+    private fun swapSprite() {
         currentSprite++
         for (row in 0..7) {
             ledControl.setRow(0, row, sprites[currentSprite%sprites.size][row])
