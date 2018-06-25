@@ -37,7 +37,8 @@ class MainActivity : Activity(), ApiListener {
 
     override fun onGetTemperature(): JSONObject {
         val response = JSONObject()
-        response.put("temperature", temperatureSensor.readTemperature().toDouble())
+        val value = temperatureSensor.readTemperature().toDouble()
+        response.put("temperature", value)
         return response
     }
 

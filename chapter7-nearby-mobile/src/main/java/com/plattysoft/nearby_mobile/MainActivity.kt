@@ -26,7 +26,6 @@ class MainActivity : Activity() {
 
     private val endpointDiscoveryCallback = object : EndpointDiscoveryCallback() {
         override fun onEndpointFound(endpointId: String, discoveredEndpointInfo: DiscoveredEndpointInfo) {
-            Log.d(TAG, "onEndpointFound: "+discoveredEndpointInfo.toString())
             connectToEndpoint(endpointId)
         }
         override fun onEndpointLost(endpointId: String) {
@@ -36,7 +35,6 @@ class MainActivity : Activity() {
 
     private val connectionLifecycleCallback = object : ConnectionLifecycleCallback(){
         override fun onConnectionResult(endpointId: String, result: ConnectionResolution) {
-            Log.d(TAG, "onConnectionResult: "+result.status)
             if (result.getStatus().getStatusCode() == STATUS_OK) {
                 connectedEndpoint = endpointId
             }
@@ -56,11 +54,13 @@ class MainActivity : Activity() {
             // Info about the temperature
             val json = payload.getAsJson()
             runOnUiThread {
-                findViewById<TextView>(R.id.temperatureValue).setText(json.getDouble("temperature").toString())
+                val value = json.getDouble("temperature").toString()
+                findViewById<TextView>(R.id.temperatureValue).setText(value)
             }
         }
 
         override fun onPayloadTransferUpdate(p0: String, p1: PayloadTransferUpdate) {
+            // Nothing to do here
         }
     }
 
