@@ -53,17 +53,19 @@ class MainActivity : Activity() {
     }
 
     private fun configureLedSwitch() {
-        firebaseReference.child("redLED").addValueEventListener ( object: ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
-                // Nothing to do here
-            }
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val redLedState = snapshot.getValue(Boolean::class.java)
-                if (redLedState != null) {
-                    redLed.value = redLedState!!
-                }
-            }
+        firebaseReference.child("redLED").addValueEventListener(
+                object : ValueEventListener {
+                    override fun onCancelled(p0: DatabaseError) {
+                        // Nothing to do here
+                    }
 
-        })
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        val redLedState = snapshot.getValue(Boolean::class.java)
+                        if (redLedState != null) {
+                            redLed.value = redLedState!!
+                        }
+                    }
+
+                })
     }
 }

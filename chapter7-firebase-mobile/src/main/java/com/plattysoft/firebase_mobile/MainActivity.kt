@@ -19,9 +19,10 @@ class MainActivity : AppCompatActivity() {
         val database = FirebaseDatabase.getInstance()
         firebaseReference = database.getReference()
 
-        redLedSwitch.setOnCheckedChangeListener({ compoundButton: CompoundButton, b: Boolean ->
+        redLedSwitch.setOnCheckedChangeListener {
+            compoundButton: CompoundButton, b: Boolean ->
             firebaseReference.child("redLED").setValue(b)
-        })
+        }
 
         firebaseReference.child("temperature").addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

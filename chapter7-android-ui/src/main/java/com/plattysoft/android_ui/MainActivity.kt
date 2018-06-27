@@ -39,9 +39,10 @@ class MainActivity : Activity() {
     }
 
     private fun configureLedSwitch() {
-        redLedSwitch.setOnCheckedChangeListener({ compoundButton: CompoundButton, b: Boolean ->
+        redLedSwitch.setOnCheckedChangeListener {
+            compoundButton: CompoundButton, b: Boolean ->
             redLed.value = b
-        })
+        }
     }
 
     private fun configureTemperatureReading() {
