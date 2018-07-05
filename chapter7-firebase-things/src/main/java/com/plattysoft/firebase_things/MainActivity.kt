@@ -62,7 +62,7 @@ class MainActivity : Activity() {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val redLedState = snapshot.getValue(Boolean::class.java)
                         if (redLedState != null) {
-                            redLed.value = redLedState!!
+                            redLed.value = redLedState
                         }
                     }
 

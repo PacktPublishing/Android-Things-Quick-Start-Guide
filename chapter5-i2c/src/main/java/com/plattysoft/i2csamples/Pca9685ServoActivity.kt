@@ -6,7 +6,8 @@ import android.view.KeyEvent
 import com.google.android.things.contrib.driver.button.Button
 import com.google.android.things.contrib.driver.button.ButtonInputDriver
 import com.google.android.things.contrib.driver.ht16k33.AlphanumericDisplay
-import com.plattysoft.pca9685.PCA9685Servo
+import com.plattysoft.pca9685.PCA9685
+import com.plattysoft.pca9685.ServoUnderPca9685
 
 /**
  * Created by Raul Portales on 09/06/18.
@@ -15,7 +16,8 @@ class Pca9685ServoActivity: Activity() {
     private lateinit var buttonA: ButtonInputDriver
     private lateinit var buttonB: ButtonInputDriver
     private lateinit var buttonC: ButtonInputDriver
-    private lateinit var servo: PCA9685Servo
+    private lateinit var pca9685: PCA9685
+    private lateinit var servo: ServoUnderPca9685
     private lateinit var display: AlphanumericDisplay
 
     private var targetAngle = 0.0
@@ -23,10 +25,11 @@ class Pca9685ServoActivity: Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        servo = PCA9685Servo()
+        pca9685 = PCA9685()
+        servo = pca9685.openServo(0)
+
         servo.setPulseDurationRange(0.65, 2.5)
         servo.setAngleRange(0.0, 180.0)
-//        servo.setEnabled(true)
 
         display = AlphanumericDisplay(I2cUtils.getBus())
         display.setEnabled(true)
@@ -44,7 +47,7 @@ class Pca9685ServoActivity: Activity() {
     override fun onDestroy() {
         super.onDestroy()
 
-        servo.close()
+        pca9685.close()
         display.close()
 
         buttonA.unregister()
@@ -78,7 +81,7 @@ class Pca9685ServoActivity: Activity() {
                 return true
             }
             KeyEvent.KEYCODE_C -> {
-//                servo.angle = targetAngle
+                servo.angle = targetAngle
                 return true
             }
             else -> {
@@ -102,27 +105,4 @@ class Pca9685ServoActivity: Activity() {
         }
         display.display(targetAngle)
     }
-}
-
-object ServoConfig {
-    var minimumAngle: Int = 0
-    var maximumAngle: Int = 180
-}
-
-private val PCA9685Servo.maximumAngle: Double
-    get() {
-        return ServoConfig.maximumAngle.toDouble()
-    }
-
-private val PCA9685Servo.minimumAngle: Double
-    get() {
-        return ServoConfig.minimumAngle.toDouble()
-    }
-
-private fun PCA9685Servo.setAngleRange(minAngle: Double, maxAngle: Double) {
-//    setServoMinMaxPwm(minAngle, maxangle, minPulse, maxPulse)
-}
-
-private fun PCA9685Servo.setPulseDurationRange(minPulse: Double, maxPulse: Double) {
-//        setServoMinMaxPwm()
 }

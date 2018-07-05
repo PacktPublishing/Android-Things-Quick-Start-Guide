@@ -31,7 +31,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     implementation 'com.nilhcem.androidthings:driver-max72xx:+'
-    implementation 'com.plattysoft.things:ssd1306:1.0.1'
+    implementation 'com.plattysoft.things:ssd1306:+'
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

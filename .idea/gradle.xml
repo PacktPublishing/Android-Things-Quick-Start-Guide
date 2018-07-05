@@ -8,13 +8,19 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/RainbowHAT" />
-            <option value="$PROJECT_DIR$/android-ui" />
-            <option value="$PROJECT_DIR$/commandsecureserver" />
-            <option value="$PROJECT_DIR$/gpiosamples" />
-            <option value="$PROJECT_DIR$/i2csamples" />
-            <option value="$PROJECT_DIR$/pwmsamples" />
-            <option value="$PROJECT_DIR$/spisamples" />
+            <option value="$PROJECT_DIR$/chapter1" />
+            <option value="$PROJECT_DIR$/chapter2-RainbowHAT" />
+            <option value="$PROJECT_DIR$/chapter3-gpio" />
+            <option value="$PROJECT_DIR$/chapter4-pwm" />
+            <option value="$PROJECT_DIR$/chapter5-i2c" />
+            <option value="$PROJECT_DIR$/chapter6-spi" />
+            <option value="$PROJECT_DIR$/chapter7-android-ui" />
+            <option value="$PROJECT_DIR$/chapter7-api-mobile" />
+            <option value="$PROJECT_DIR$/chapter7-api-things" />
+            <option value="$PROJECT_DIR$/chapter7-firebase-mobile" />
+            <option value="$PROJECT_DIR$/chapter7-firebase-things" />
+            <option value="$PROJECT_DIR$/chapter7-nearby-mobile" />
+            <option value="$PROJECT_DIR$/chapter7-nearby-things" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
