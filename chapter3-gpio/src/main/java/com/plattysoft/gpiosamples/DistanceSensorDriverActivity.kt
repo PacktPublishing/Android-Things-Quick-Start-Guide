@@ -45,7 +45,7 @@ class DistanceSensorDriverActivity : Activity() {
         override fun onDynamicSensorConnected(sensor: Sensor?) {
             if (sensor?.type == Sensor.TYPE_PROXIMITY) {
                 sensorManager.registerListener(sensorListener,
-                        sensor, SensorManager.SENSOR_DELAY_FASTEST);
+                        sensor, SensorManager.SENSOR_DELAY_FASTEST)
             }
         }
     }
@@ -53,7 +53,7 @@ class DistanceSensorDriverActivity : Activity() {
     val sensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
             val distance = event.values[0]
-            Log.i(ContentValues.TAG, "proximity changed: " + distance)
+            Log.i(ContentValues.TAG, "proximity changed: $distance")
         }
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {

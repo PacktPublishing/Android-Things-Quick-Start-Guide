@@ -38,12 +38,12 @@ class LCDClockActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        display = NumericDisplay(dataGpioPinName, clockGpioPinName);
+        display = NumericDisplay(dataGpioPinName, clockGpioPinName)
         display.setBrightness(NumericDisplay.MAX_BRIGHTNESS)
 
         Timer().schedule(timerTask {
             // Blink the colon
-            display.setColonEnabled(!display.colonEnabled);
+            display.setColonEnabled(!display.colonEnabled)
             // Update the values
             date.time = System.currentTimeMillis()
             display.display(dateFormat.format(date))
