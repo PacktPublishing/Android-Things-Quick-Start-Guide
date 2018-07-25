@@ -20,8 +20,8 @@ class Mpu6050Activity : Activity() {
         super.onCreate(savedInstanceState)
         val gyroscope = Mpu6050.open()
         // Values are on accelXYZ and gyroXYZ
-        Log.d(TAG, "Accel: x:"+gyroscope.accelX+" y;"+gyroscope.accelY+" z:"+gyroscope.accelZ)
-        Log.d(TAG, "Gyro: x:"+gyroscope.gyroX+" y;"+gyroscope.gyroY+" z:"+gyroscope.gyroZ)
+        Log.d(TAG, "Accel: x:${gyroscope.accelX} y:${gyroscope.accelY} z:${gyroscope.accelZ}")
+        Log.d(TAG, "Gyro: x:${gyroscope.gyroX} y:${gyroscope.gyroY} z:${gyroscope.gyroZ}")
         gyroscope.close()
     }
 }

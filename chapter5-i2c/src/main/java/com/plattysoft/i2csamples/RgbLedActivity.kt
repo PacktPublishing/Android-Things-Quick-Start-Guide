@@ -19,7 +19,7 @@ class RgbLedActivity: Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         adc = Pcf8591.open()
-        pwmExpander = PCA9685();
+        pwmExpander = PCA9685()
 
         handler.post(object : Runnable {
             override fun run() {
