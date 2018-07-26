@@ -15,10 +15,10 @@ class Ssd1306OverSpiActivity : Activity() {
         val display = Ssd1306.openSpi("SPI0.0", "BCM25", "BCM24", 128, 64)
         for (i in 0 until display.lcdWidth) {
             for (j in 0 until display.lcdHeight) {
-                display.setPixel(i, j, i%display.lcdHeight > j)
+                display.setPixel(i, j, i % display.lcdHeight > j)
             }
         }
-        // render the pixel data
+        // Render the pixel data
         display.show()
         // Cleanup
         display.close()

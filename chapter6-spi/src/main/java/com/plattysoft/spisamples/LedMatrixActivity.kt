@@ -64,7 +64,7 @@ class LedMatrixActivity : Activity() {
     private fun swapSprite() {
         currentSprite++
         for (row in 0..7) {
-            ledControl.setRow(0, row, sprites[currentSprite%sprites.size][row])
+            ledControl.setRow(0, row, sprites[currentSprite % sprites.size][row])
         }
     }
 }
