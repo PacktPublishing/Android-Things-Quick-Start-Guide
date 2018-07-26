@@ -6,7 +6,7 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        applicationId "com.plattysoft.firebase_mobile"
+        applicationId "com.plattysoft.firebase.mobile"
         minSdkVersion 26
         targetSdkVersion 26
         versionCode 1

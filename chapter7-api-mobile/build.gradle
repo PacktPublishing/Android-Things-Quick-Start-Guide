@@ -5,7 +5,7 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "com.plattysoft.api_mobile"
+        applicationId "com.plattysoft.api.mobile"
         minSdkVersion 27
         targetSdkVersion 27
         versionCode 1

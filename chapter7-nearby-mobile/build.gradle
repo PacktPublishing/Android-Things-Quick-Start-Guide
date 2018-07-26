@@ -6,7 +6,7 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        applicationId "com.plattysoft.nearby_mobile"
+        applicationId "com.plattysoft.nearby.mobile"
         minSdkVersion 26
         targetSdkVersion 26
         versionCode 1

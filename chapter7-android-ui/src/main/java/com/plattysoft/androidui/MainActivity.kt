@@ -1,4 +1,4 @@
-package com.plattysoft.android_ui
+package com.plattysoft.androidui
 
 import android.app.Activity
 import android.os.Bundle

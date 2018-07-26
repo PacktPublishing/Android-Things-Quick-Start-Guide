@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.plattysoft.android_ui">
+    package="com.plattysoft.androidui">
 
     <uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" />
 
     <application>
         <uses-library android:name="com.google.android.things" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.plattysoft.androidui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

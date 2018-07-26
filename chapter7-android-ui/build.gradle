@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.plattysoft.android_ui"
+        applicationId "com.plattysoft.androidui"
         minSdkVersion 27
         targetSdkVersion 27
         versionCode 1

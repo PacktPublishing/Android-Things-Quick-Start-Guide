@@ -6,7 +6,7 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        applicationId "com.plattysoft.nearby_things"
+        applicationId "com.plattysoft.nearby.rhings"
         minSdkVersion 27
         targetSdkVersion 27
         versionCode 1
