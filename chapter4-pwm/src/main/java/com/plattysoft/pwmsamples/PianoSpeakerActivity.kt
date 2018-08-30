@@ -1,4 +1,4 @@
-package com.plattysoft.androidthingssamples
+package com.plattysoft.pwmsamples
 
 import android.app.Activity
 import android.os.Bundle
