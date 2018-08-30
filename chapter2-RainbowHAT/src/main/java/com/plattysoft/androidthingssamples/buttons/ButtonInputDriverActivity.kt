@@ -42,8 +42,7 @@ class ButtonInputDriverActivity : Activity() {
         if (led != null) {
             led.value = true
             return true
-        }
-        else {
+        } else {
             return super.onKeyDown(keyCode, event)
         }
     }
@@ -53,8 +52,7 @@ class ButtonInputDriverActivity : Activity() {
         if (led != null) {
             led.value = false
             return true
-        }
-        else {
+        } else {
             return super.onKeyUp(keyCode, event)
         }
     }

@@ -12,7 +12,7 @@ import com.plattysoft.pca9685.ServoUnderPca9685
 /**
  * Created by Raul Portales on 09/06/18.
  */
-class Pca9685ServoActivity: Activity() {
+class Pca9685ServoActivity : Activity() {
     private lateinit var buttonA: ButtonInputDriver
     private lateinit var buttonB: ButtonInputDriver
     private lateinit var buttonC: ButtonInputDriver
@@ -70,7 +70,7 @@ class Pca9685ServoActivity: Activity() {
         return super.onKeyMultiple(keyCode, repeatCount, event)
     }
 
-    private fun handleKeyCode(keyCode: Int): Boolean{
+    private fun handleKeyCode(keyCode: Int): Boolean {
         when (keyCode) {
             KeyEvent.KEYCODE_A -> {
                 decreaseAngle()

@@ -11,7 +11,7 @@ class BlinkHandlerActivity : Activity() {
     private lateinit var led: Gpio
     private val handler = Handler()
 
-    private val ledRunnable = object: Runnable {
+    private val ledRunnable = object : Runnable {
         override fun run() {
             led.value = !led.value
             handler.postDelayed(this, 1000)

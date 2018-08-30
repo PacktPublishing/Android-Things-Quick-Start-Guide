@@ -27,14 +27,11 @@ class RobotCarActivity : Activity() {
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
         if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
             mMotorController.setMode(MotorMode.FORWARD)
-        }
-        else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
+        } else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
             mMotorController.setMode(MotorMode.BACKWARD)
-        }
-        else if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
+        } else if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
             mMotorController.setMode(MotorMode.TURN_LEFT)
-        }
-        else if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+        } else if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
             mMotorController.setMode(MotorMode.TURN_RIGHT)
         }
         return super.onKeyDown(keyCode, event)

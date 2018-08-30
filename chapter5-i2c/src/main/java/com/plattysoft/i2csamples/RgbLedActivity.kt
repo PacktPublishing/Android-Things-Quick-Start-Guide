@@ -9,7 +9,7 @@ import com.plattysoft.pcf8591.Pcf8591
 /**
  * Created by Raul Portales on 23/05/18.
  */
-class RgbLedActivity: Activity() {
+class RgbLedActivity : Activity() {
 
     private lateinit var pwmExpander: PCA9685
     private lateinit var adc: Pcf8591

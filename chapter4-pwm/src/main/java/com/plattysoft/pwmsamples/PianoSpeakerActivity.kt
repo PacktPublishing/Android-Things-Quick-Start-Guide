@@ -44,8 +44,7 @@ class PianoSpeakerActivity : Activity() {
         if (freqToPlay != null) {
             buzzer.play(freqToPlay)
             return true
-        }
-        else {
+        } else {
             return false
         }
     }

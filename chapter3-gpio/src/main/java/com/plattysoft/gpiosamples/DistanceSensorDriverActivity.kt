@@ -54,7 +54,7 @@ class DistanceSensorDriverActivity : Activity() {
         }
     }
 
-    lateinit var sensorManager : SensorManager
+    lateinit var sensorManager: SensorManager
     lateinit var sensorDriver: Hcsr04SensorDriver
 
     override fun onCreate(savedInstanceState: Bundle?) {

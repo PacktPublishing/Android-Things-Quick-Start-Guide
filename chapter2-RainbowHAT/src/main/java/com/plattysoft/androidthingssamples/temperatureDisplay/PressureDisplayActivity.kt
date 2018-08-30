@@ -11,14 +11,14 @@ import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 /**
  * Created by Raul Portales on 07/05/18.
  */
-class PressureDisplayActivity: Activity() {
+class PressureDisplayActivity : Activity() {
 
     private val handler = Handler()
 
     private lateinit var sensor: Bmx280
     private lateinit var alphanumericDisplay: AlphanumericDisplay
 
-    val displayPressureRunnable = object: Runnable {
+    val displayPressureRunnable = object : Runnable {
         override fun run() {
             val pressure = sensor.readPressure().toDouble()
             alphanumericDisplay.display(pressure)

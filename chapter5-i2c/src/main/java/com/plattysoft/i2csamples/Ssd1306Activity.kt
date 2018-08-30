@@ -14,7 +14,7 @@ class Ssd1306Activity : Activity() {
         val display = Ssd1306(I2cUtils.getBus())
         for (i in 0 until display.lcdWidth) {
             for (j in 0 until display.lcdHeight) {
-                display.setPixel(i, j, i%display.lcdHeight > j)
+                display.setPixel(i, j, i % display.lcdHeight > j)
             }
         }
         // render the pixel data

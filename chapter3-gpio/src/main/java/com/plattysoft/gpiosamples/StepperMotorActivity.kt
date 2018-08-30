@@ -31,9 +31,11 @@ class StepperMotorActivity : Activity() {
                     override fun onStarted() {
                         Log.i(TAG, "rotation started")
                     }
+
                     override fun onFinishedSuccessfully() {
                         Log.i(TAG, "rotation finished")
                     }
+
                     override fun onFinishedWithError(degreesToRotate: Double, rotatedDegrees: Double, exception: Exception) {
                         Log.e(TAG, "error, degrees to rotate: {$degreesToRotate}  rotated degrees: {$rotatedDegrees}")
                     }

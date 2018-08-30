@@ -15,7 +15,7 @@ import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 /**
  * Created by Raul Portales on 07/05/18.
  */
-class TemperatureSensorDriverActivity : Activity(){
+class TemperatureSensorDriverActivity : Activity() {
 
     val sensorCallback = object : SensorManager.DynamicSensorCallback() {
         override fun onDynamicSensorConnected(sensor: Sensor?) {
@@ -35,8 +35,8 @@ class TemperatureSensorDriverActivity : Activity(){
         }
     }
 
-    lateinit var sensorManager : SensorManager
-    lateinit var sensorDriver : Bmx280SensorDriver
+    lateinit var sensorManager: SensorManager
+    lateinit var sensorDriver: Bmx280SensorDriver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

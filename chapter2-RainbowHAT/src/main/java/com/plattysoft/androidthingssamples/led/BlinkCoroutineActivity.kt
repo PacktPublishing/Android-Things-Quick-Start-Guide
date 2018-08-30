@@ -17,7 +17,7 @@ class BlinkCoroutineActivity : Activity() {
         super.onCreate(savedInstanceState)
         setup()
         job = launch {
-            while(isActive) {
+            while (isActive) {
                 loop()
             }
         }

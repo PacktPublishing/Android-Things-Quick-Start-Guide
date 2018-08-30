@@ -48,8 +48,7 @@ class PianoPwmActivity : Activity() {
             buzzer.setPwmFrequencyHz(freqToPlay)
             buzzer.setEnabled(true)
             return true
-        }
-        else {
+        } else {
             return false
         }
     }

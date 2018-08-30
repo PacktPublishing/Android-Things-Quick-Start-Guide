@@ -22,7 +22,7 @@ class DistanceSensorActivity : Activity() {
         super.onCreate(savedInstanceState)
         sensor = Hcsr04(triggerGpio, echoGpio)
 
-        handler.post(object: Runnable {
+        handler.post(object : Runnable {
             override fun run() {
                 val distance = sensor.readDistance()
                 Log.d("DistanceSensorActivity", "distance: $distance")

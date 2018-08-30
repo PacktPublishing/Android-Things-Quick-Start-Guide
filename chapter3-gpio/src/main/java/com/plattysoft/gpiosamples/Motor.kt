@@ -3,7 +3,7 @@ package com.plattysoft.gpiosamples
 import com.google.android.things.pio.Gpio
 import com.google.android.things.pio.PeripheralManager
 
-class Motor (gpioForwardPin: String, gpioBackwardPin: String) : AutoCloseable {
+class Motor(gpioForwardPin: String, gpioBackwardPin: String) : AutoCloseable {
     private val gpioForward: Gpio
     private val gpioBackward: Gpio
 
@@ -28,7 +28,7 @@ class Motor (gpioForwardPin: String, gpioBackwardPin: String) : AutoCloseable {
 
     fun backward() {
         gpioForward.value = false
-        gpioBackward.value= true
+        gpioBackward.value = true
     }
 
     fun stop() {

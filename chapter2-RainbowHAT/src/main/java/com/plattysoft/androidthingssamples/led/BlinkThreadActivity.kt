@@ -12,7 +12,7 @@ class BlinkThreadActivity : Activity() {
     private lateinit var led: Gpio
 
     private val thread = Thread {
-        while(true) {
+        while (true) {
             loop()
         }
     }

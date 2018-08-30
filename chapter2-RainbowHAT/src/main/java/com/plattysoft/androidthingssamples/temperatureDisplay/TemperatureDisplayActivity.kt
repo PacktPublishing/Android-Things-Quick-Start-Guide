@@ -11,19 +11,19 @@ import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 /**
  * Created by Raul Portales on 07/05/18.
  */
-class TemperatureDisplayActivity: Activity() {
+class TemperatureDisplayActivity : Activity() {
 
     private val handler = Handler()
 
     private lateinit var sensor: Bmx280
     private lateinit var alphanumericDisplay: AlphanumericDisplay
 
-    val displayTemperatureRunnable = object: Runnable {
+    val displayTemperatureRunnable = object : Runnable {
         override fun run() {
             val temperature = sensor.readTemperature().toDouble()
             // Display the temperature on the alphanumeric display.
             alphanumericDisplay.display(temperature)
-            handler.post(this )
+            handler.post(this)
         }
     }
 

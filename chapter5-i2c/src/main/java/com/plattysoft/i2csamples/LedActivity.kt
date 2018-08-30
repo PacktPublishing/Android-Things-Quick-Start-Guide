@@ -8,7 +8,7 @@ import com.plattysoft.pca9685.PCA9685
 /**
  * Created by Raul Portales on 23/05/18.
  */
-class LedActivity: Activity() {
+class LedActivity : Activity() {
 
     private lateinit var pwmExpander: PCA9685
     private val handler = Handler()
