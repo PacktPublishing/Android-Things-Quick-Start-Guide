@@ -30,7 +30,7 @@ class AllSensorsDriverActivity : Activity() {
 
     private val temperatureSensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
-            Log.i(TAG, "temperature changed: " + event.values[0])
+            Log.i(TAG, "temperature changed: ${event.values[0]}")
         }
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
@@ -40,7 +40,7 @@ class AllSensorsDriverActivity : Activity() {
 
     private val pressureSensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
-            Log.i(TAG, "pressure changed: " + event.values[0])
+            Log.i(TAG, "pressure changed: ${event.values[0]}")
         }
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {

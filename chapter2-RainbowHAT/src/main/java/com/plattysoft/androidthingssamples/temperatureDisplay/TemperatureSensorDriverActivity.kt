@@ -27,7 +27,7 @@ class TemperatureSensorDriverActivity : Activity() {
 
     private val temperatureSensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
-            Log.i(TAG, "temperature changed: " + event.values[0])
+            Log.i(TAG, "temperature changed: ${event.values[0]}")
         }
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
