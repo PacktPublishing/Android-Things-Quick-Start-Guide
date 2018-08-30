@@ -6,8 +6,6 @@ import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
 import kotlinx.coroutines.experimental.*
 
-private val TAG = BlinkCoroutineActivity::class.java.simpleName
-
 class BlinkCoroutineActivity : Activity() {
 
     private lateinit var led: Gpio
