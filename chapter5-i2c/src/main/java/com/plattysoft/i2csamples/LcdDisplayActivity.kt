@@ -2,9 +2,7 @@ package com.plattysoft.i2csamples
 
 import android.app.Activity
 import android.os.Bundle
-import android.text.method.TextKeyListener.clear
 import com.nilhcem.androidthings.driver.lcdpcf8574.LcdPcf8574
-
 
 
 /**

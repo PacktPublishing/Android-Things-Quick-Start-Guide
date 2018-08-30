@@ -4,11 +4,9 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.KeyEvent.*
-import com.google.android.things.contrib.driver.button.Button
 import com.google.android.things.contrib.driver.button.ButtonInputDriver
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
-import com.google.android.things.userdriver.input.InputDriver
 
 /**
  * Created by Raul Portales on 28/04/18.

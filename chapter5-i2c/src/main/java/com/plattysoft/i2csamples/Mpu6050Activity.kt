@@ -3,8 +3,6 @@ package com.plattysoft.i2csamples
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.view.ViewGroup
 import com.plattysoft.mpu6050.Mpu6050
 
 /**

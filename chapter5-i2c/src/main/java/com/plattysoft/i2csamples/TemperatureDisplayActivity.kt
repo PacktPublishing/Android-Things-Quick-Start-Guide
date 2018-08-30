@@ -3,9 +3,9 @@ package com.plattysoft.i2csamples
 import android.app.Activity
 import android.os.Bundle
 import android.os.Handler
-import com.google.android.things.contrib.driver.ht16k33.Ht16k33
-import com.google.android.things.contrib.driver.ht16k33.AlphanumericDisplay
 import com.google.android.things.contrib.driver.bmx280.Bmx280
+import com.google.android.things.contrib.driver.ht16k33.AlphanumericDisplay
+import com.google.android.things.contrib.driver.ht16k33.Ht16k33
 
 /**
  * Created by Raul Portales on 07/05/18.

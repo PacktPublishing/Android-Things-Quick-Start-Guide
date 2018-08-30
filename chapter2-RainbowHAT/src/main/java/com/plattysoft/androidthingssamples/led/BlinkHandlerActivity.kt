@@ -3,7 +3,6 @@ package com.plattysoft.androidthingssamples.led
 import android.app.Activity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
 

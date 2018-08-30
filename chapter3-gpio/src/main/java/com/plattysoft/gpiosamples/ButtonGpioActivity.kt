@@ -2,9 +2,7 @@ package com.plattysoft.gpiosamples
 
 import android.app.Activity
 import android.os.Bundle
-import com.google.android.things.contrib.driver.button.Button
 import com.google.android.things.pio.Gpio
-import com.google.android.things.pio.Gpio.ACTIVE_HIGH
 import com.google.android.things.pio.PeripheralManager
 
 /**

@@ -7,7 +7,6 @@ import android.view.KeyEvent.*
 import com.google.android.things.contrib.driver.button.Button
 import com.google.android.things.contrib.driver.button.ButtonInputDriver
 import com.google.android.things.contrib.driver.pwmspeaker.Speaker
-import com.google.android.things.pio.Gpio
 import com.plattysoft.pwmsamples.BoardDefaults
 
 /**

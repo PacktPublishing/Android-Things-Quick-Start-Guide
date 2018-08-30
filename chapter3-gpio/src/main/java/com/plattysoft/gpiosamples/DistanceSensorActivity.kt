@@ -4,11 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
-import com.google.android.things.contrib.driver.tm1637.NumericDisplay
 import com.leinardi.android.things.driver.hcsr04.Hcsr04
-import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.concurrent.timerTask
 
 /**
  * Created by Raul Portales on 13/05/18.

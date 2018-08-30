@@ -2,7 +2,6 @@ package com.plattysoft.i2csamples
 
 import android.app.Activity
 import android.os.Bundle
-import com.google.android.things.contrib.driver.ssd1306.BitmapHelper
 import com.google.android.things.contrib.driver.ssd1306.Ssd1306
 
 /**

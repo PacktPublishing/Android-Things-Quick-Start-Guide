@@ -1,10 +1,10 @@
 package com.plattysoft.androidthingssamples.ledstrip
 
-import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import android.app.Activity
 import android.graphics.Color
-import com.google.android.things.contrib.driver.apa102.Apa102
 import android.os.Bundle
+import com.google.android.things.contrib.driver.apa102.Apa102
+import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import java.util.*
 import kotlin.concurrent.timerTask
 

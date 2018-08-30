@@ -6,7 +6,6 @@ import com.google.android.things.contrib.driver.ht16k33.Ht16k33
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 
 import java.util.Timer
-import java.util.TimerTask
 import kotlin.concurrent.timerTask
 
 /**

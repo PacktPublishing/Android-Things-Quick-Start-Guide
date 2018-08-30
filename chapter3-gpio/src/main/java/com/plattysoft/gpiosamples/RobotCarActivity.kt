@@ -1,17 +1,10 @@
 package com.plattysoft.gpiosamples
 
 import android.app.Activity
-import android.view.KeyEvent.KEYCODE_DPAD_RIGHT
-import android.view.KeyEvent.KEYCODE_DPAD_LEFT
-import android.view.KeyEvent.KEYCODE_DPAD_DOWN
-import android.view.KeyEvent.KEYCODE_DPAD_UP
-import com.leinardi.android.things.driver.hcsr04.Hcsr04
 import android.os.Bundle
-import android.hardware.SensorManager
 import android.view.KeyEvent
 import com.plattysoft.l298n.L298N
 import com.plattysoft.l298n.MotorMode
-import java.io.IOException
 
 
 /**

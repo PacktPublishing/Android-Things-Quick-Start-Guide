@@ -3,9 +3,7 @@ package com.plattysoft.i2csamples
 import android.app.Activity
 import android.os.Bundle
 import android.os.Handler
-import com.google.android.things.pio.PeripheralManager
 import com.plattysoft.pca9685.PCA9685
-import com.plattysoft.pcf8591.Pcf8591
 
 /**
  * Created by Raul Portales on 23/05/18.
