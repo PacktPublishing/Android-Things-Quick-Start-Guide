@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -9,32 +9,32 @@
         android:id="@+id/redLedSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/red_led"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
+        android:text="@string/red_led"
         tools:layout_editor_absoluteX="47dp"
         tools:layout_editor_absoluteY="54dp" />
 
     <TextView
         android:id="@+id/temperatureLabel"
-        android:layout_below="@+id/redLedSwitch"
-        android:layout_marginTop="12dp"
-        android:layout_alignLeft="@+id/redLedSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/redLedSwitch"
+        android:layout_below="@+id/redLedSwitch"
+        android:layout_marginTop="12dp"
         android:text="@string/temperature"
         tools:layout_editor_absoluteX="193dp"
         tools:layout_editor_absoluteY="126dp" />
 
     <TextView
-        android:layout_toRightOf="@+id/temperatureLabel"
-        android:layout_alignBottom="@+id/temperatureLabel"
-        android:layout_marginLeft="12dp"
         android:id="@+id/temperatureValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="20C"
+        android:layout_alignBottom="@+id/temperatureLabel"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/temperatureLabel"
         tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="126dp" />
+        tools:layout_editor_absoluteY="126dp"
+        tools:text="20C" />
 
 </RelativeLayout>
