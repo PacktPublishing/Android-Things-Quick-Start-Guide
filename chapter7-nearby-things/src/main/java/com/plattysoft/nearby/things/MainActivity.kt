@@ -26,8 +26,8 @@ class MainActivity : Activity() {
 
     private lateinit var nearbyConnections: ConnectionsClient
 
-    var connectedEndpoint: String? = null
-    val handler = Handler()
+    private var connectedEndpoint: String? = null
+    private val handler = Handler()
 
     private val payloadCallback= object: PayloadCallback() {
         override fun onPayloadReceived(p0: String, p1: Payload) {
