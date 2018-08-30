@@ -53,7 +53,7 @@ class MainActivity : Activity() {
             }
         }
         override fun onConnectionInitiated(endpointId: String, connectionInfo: ConnectionInfo) {
-            nearbyConnections.acceptConnection(endpointId, payloadCallback);
+            nearbyConnections.acceptConnection(endpointId, payloadCallback)
         }
     }
 

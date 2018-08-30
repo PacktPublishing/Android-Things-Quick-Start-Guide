@@ -18,7 +18,7 @@ class RobotCarActivity : Activity() {
         super.onCreate(savedInstanceState)
         // PINS for the motor controller L298N
         // BCM22, BCM23, BCM24, BCM25
-        //            mMotorController = L298N.open("BCM22", "BCM23", "BCM24", "BCM25");
+        //            mMotorController = L298N.open("BCM22", "BCM23", "BCM24", "BCM25")
         mMotorController = L298N.open("GPIO2_IO00", "GPIO2_IO05",
                 "GPIO2_IO07", "GPIO6_IO15")
         mMotorController.setMode(MotorMode.STOP)

@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     init {
         val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BASIC;
+        logging.level = HttpLoggingInterceptor.Level.BASIC
         val client = OkHttpClient.Builder()
                 .addInterceptor(logging)
-                .build();
+                .build()
         val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(client)

@@ -45,7 +45,7 @@ class TemperatureSensorDriverActivity : Activity() {
         sensorManager.registerDynamicSensorCallback(sensorCallback)
 
         sensorDriver = RainbowHat.createSensorDriver()
-        sensorDriver.registerTemperatureSensor();
+        sensorDriver.registerTemperatureSensor()
     }
 
     private fun registerTemperatureListener(sensor: Sensor) {

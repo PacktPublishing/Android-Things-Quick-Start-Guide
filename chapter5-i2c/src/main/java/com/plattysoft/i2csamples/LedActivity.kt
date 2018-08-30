@@ -15,7 +15,7 @@ class LedActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        pwmExpander = PCA9685();
+        pwmExpander = PCA9685()
         pwmExpander.setPwmFreq(50)
         val initialTime = System.currentTimeMillis()
 

@@ -54,7 +54,7 @@ class AllSensorsDriverActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sensorDriver = RainbowHat.createSensorDriver()
-        sensorDriver.registerTemperatureSensor();
+        sensorDriver.registerTemperatureSensor()
         sensorDriver.registerPressureSensor()
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
