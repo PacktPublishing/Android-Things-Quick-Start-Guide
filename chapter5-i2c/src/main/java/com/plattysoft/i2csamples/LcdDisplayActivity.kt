@@ -11,7 +11,7 @@ import com.nilhcem.androidthings.driver.lcdpcf8574.LcdPcf8574
 class LcdDisplayActivity : Activity() {
 
     companion object {
-        const val I2C_ADDRESS = 0x27
+        private const val I2C_ADDRESS = 0x27
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

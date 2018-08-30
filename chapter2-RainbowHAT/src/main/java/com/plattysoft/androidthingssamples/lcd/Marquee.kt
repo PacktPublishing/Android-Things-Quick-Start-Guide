@@ -15,9 +15,9 @@ import kotlin.concurrent.timerTask
 class Marquee : AutoCloseable {
 
     companion object {
-        private val MARQUEE_INTERVAL: Long = 800
-        private val LCD_LENGTH = 4
-        val PADDING = "    "
+        private const val MARQUEE_INTERVAL: Long = 800
+        private const val LCD_LENGTH = 4
+        private const val PADDING = "    "
     }
 
     private var timer: Timer? = null

@@ -18,7 +18,7 @@ class PressureDisplayActivity : Activity() {
     private lateinit var sensor: Bmx280
     private lateinit var alphanumericDisplay: AlphanumericDisplay
 
-    val displayPressureRunnable = object : Runnable {
+    private val displayPressureRunnable = object : Runnable {
         override fun run() {
             val pressure = sensor.readPressure().toDouble()
             alphanumericDisplay.display(pressure)

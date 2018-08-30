@@ -20,13 +20,13 @@ class DistanceSensorDriverActivity : Activity() {
         private const val DEVICE_RPI3 = "rpi3"
         private const val DEVICE_IMX7D_PICO = "imx7d_pico"
 
-        val triggerGpio: String
+        private val triggerGpio: String
             get() = when (Build.DEVICE) {
                 DEVICE_RPI3 -> "BCM23"
                 DEVICE_IMX7D_PICO -> "GPIO2_IO13"
                 else -> throw IllegalStateException("Unknown Build.DEVICE ${Build.DEVICE}")
             }
-        val echoGpio: String
+        private val echoGpio: String
             get() = when (Build.DEVICE) {
                 DEVICE_RPI3 -> "BCM24"
                 DEVICE_IMX7D_PICO -> "GPIO2_IO12"
@@ -34,7 +34,7 @@ class DistanceSensorDriverActivity : Activity() {
             }
     }
 
-    val sensorCallback = object : SensorManager.DynamicSensorCallback() {
+    private val sensorCallback = object : SensorManager.DynamicSensorCallback() {
         override fun onDynamicSensorConnected(sensor: Sensor?) {
             if (sensor?.type == Sensor.TYPE_PROXIMITY) {
                 sensorManager.registerListener(sensorListener,
@@ -43,7 +43,7 @@ class DistanceSensorDriverActivity : Activity() {
         }
     }
 
-    val sensorListener = object : SensorEventListener {
+    private val sensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
             val distance = event.values[0]
             Log.i(ContentValues.TAG, "proximity changed: $distance")
@@ -54,8 +54,8 @@ class DistanceSensorDriverActivity : Activity() {
         }
     }
 
-    lateinit var sensorManager: SensorManager
-    lateinit var sensorDriver: Hcsr04SensorDriver
+    private lateinit var sensorManager: SensorManager
+    private lateinit var sensorDriver: Hcsr04SensorDriver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

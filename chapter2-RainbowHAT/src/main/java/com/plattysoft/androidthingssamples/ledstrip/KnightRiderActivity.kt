@@ -18,8 +18,8 @@ import kotlin.concurrent.timerTask
 class KnightRiderActivity : Activity() {
 
     companion object {
-        private val MIN_INTERVAL = 25
-        private val MAX_INTERVAL = 400
+        private const val MIN_INTERVAL = 25
+        private const val MAX_INTERVAL = 400
     }
 
     private var timer: Timer? = null

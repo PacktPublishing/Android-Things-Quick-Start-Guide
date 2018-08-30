@@ -17,13 +17,13 @@ class LCDClockActivity : Activity() {
         private const val DEVICE_RPI3 = "rpi3"
         private const val DEVICE_IMX7D_PICO = "imx7d_pico"
 
-        val dataGpioPinName: String
+        private val dataGpioPinName: String
             get() = when (Build.DEVICE) {
                 DEVICE_RPI3 -> "BCM23"
                 DEVICE_IMX7D_PICO -> "GPIO2_IO13"
                 else -> throw IllegalStateException("Unknown Build.DEVICE ${Build.DEVICE}")
             }
-        val clockGpioPinName: String
+        private val clockGpioPinName: String
             get() = when (Build.DEVICE) {
                 DEVICE_RPI3 -> "BCM24"
                 DEVICE_IMX7D_PICO -> "GPIO2_IO12"
@@ -31,8 +31,8 @@ class LCDClockActivity : Activity() {
             }
     }
 
-    val dateFormat = SimpleDateFormat("HHmm")
-    val date = Date()
+    private val dateFormat = SimpleDateFormat("HHmm")
+    private val date = Date()
 
     lateinit var display: NumericDisplay
 

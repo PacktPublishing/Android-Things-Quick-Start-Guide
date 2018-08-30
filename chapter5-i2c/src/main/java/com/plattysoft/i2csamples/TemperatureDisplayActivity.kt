@@ -20,7 +20,7 @@ class TemperatureDisplayActivity : Activity() {
     private lateinit var sensor: Bmx280
     private lateinit var alphanumericDisplay: AlphanumericDisplay
 
-    val displayTemperatureRunnable = object : Runnable {
+    private val displayTemperatureRunnable = object : Runnable {
         override fun run() {
             val temperature = sensor.readTemperature().toDouble()
             // Display the temperature on the alphanumeric display.

@@ -18,7 +18,7 @@ class KnightRiderSimpleActivity : Activity() {
     private var currentPos = 0
     private val interval: Long = 100
 
-    val colors = IntArray(RainbowHat.LEDSTRIP_LENGTH)
+    private val colors = IntArray(RainbowHat.LEDSTRIP_LENGTH)
     private lateinit var ledStrip: Apa102
 
     override fun onCreate(savedInstanceState: Bundle?) {

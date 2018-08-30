@@ -11,12 +11,12 @@ import com.leinardi.android.things.driver.hcsr04.Hcsr04
  */
 class DistanceSensorActivity : Activity() {
     companion object {
-        val triggerGpio = "BCM23"
-        val echoGpio = "BCM24"
+        private const val triggerGpio = "BCM23"
+        private const val echoGpio = "BCM24"
     }
 
-    lateinit var sensor: Hcsr04
-    val handler = Handler()
+    private lateinit var sensor: Hcsr04
+    private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
