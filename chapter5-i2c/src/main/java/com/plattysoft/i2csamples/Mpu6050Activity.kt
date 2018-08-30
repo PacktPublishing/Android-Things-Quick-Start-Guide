@@ -11,7 +11,7 @@ import com.plattysoft.mpu6050.Mpu6050
 class Mpu6050Activity : Activity() {
 
     companion object {
-        const val TAG = "Mpu6050SampleActivity"
+        const val TAG = "Mpu6050Activity"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
