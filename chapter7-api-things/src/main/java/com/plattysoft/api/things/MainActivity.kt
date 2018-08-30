@@ -7,8 +7,6 @@ import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
 import org.json.JSONObject
 
-private val TAG = MainActivity::class.java.simpleName
-
 class MainActivity : Activity(), ApiListener {
 
     lateinit var redLed: Gpio
