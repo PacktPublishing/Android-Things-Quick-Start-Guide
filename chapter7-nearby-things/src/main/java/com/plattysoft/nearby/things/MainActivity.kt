@@ -43,7 +43,7 @@ class MainActivity : Activity() {
 
     private val connectionLifecycleCallback= object : ConnectionLifecycleCallback (){
         override fun onConnectionResult(endpointId: String, result: ConnectionResolution) {
-            if (result.getStatus().getStatusCode() == STATUS_OK) {
+            if (result.status.statusCode == STATUS_OK) {
                 connectedEndpoint = endpointId
             }
         }

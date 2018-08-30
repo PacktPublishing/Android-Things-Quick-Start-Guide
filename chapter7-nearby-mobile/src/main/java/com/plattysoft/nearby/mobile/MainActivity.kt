@@ -35,7 +35,7 @@ class MainActivity : Activity() {
 
     private val connectionLifecycleCallback = object : ConnectionLifecycleCallback(){
         override fun onConnectionResult(endpointId: String, result: ConnectionResolution) {
-            if (result.getStatus().getStatusCode() == STATUS_OK) {
+            if (result.status.statusCode == STATUS_OK) {
                 connectedEndpoint = endpointId
             }
         }
@@ -55,7 +55,7 @@ class MainActivity : Activity() {
             val json = payload.getAsJson()
             runOnUiThread {
                 val value = json.getDouble("temperature").toString()
-                findViewById<TextView>(R.id.temperatureValue).setText(value)
+                findViewById<TextView>(R.id.temperatureValue).text = value
             }
         }
 

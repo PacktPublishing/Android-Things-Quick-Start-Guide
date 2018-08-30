@@ -65,12 +65,12 @@ class KnightRiderActivity : Activity() {
             }
         } else if (keyCode == KeyEvent.KEYCODE_B) {
             if (interval > MIN_INTERVAL) {
-                interval = interval / 2
+                interval /= 2
                 restartTimer()
             }
         } else if (keyCode == KeyEvent.KEYCODE_C) {
             if (interval < MAX_INTERVAL) {
-                interval = interval * 2
+                interval *= 2
                 restartTimer()
             }
         }

@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         const val BASE_URL = "http://192.168.42.38:8080/"
     }
 
-    lateinit var apiService: ThingsApi
+    private val apiService: ThingsApi
 
     init {
         val logging = HttpLoggingInterceptor()
-        logging.setLevel(HttpLoggingInterceptor.Level.BASIC);
+        logging.level = HttpLoggingInterceptor.Level.BASIC;
         val client = OkHttpClient.Builder()
                 .addInterceptor(logging)
                 .build();
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<TemperatureResponse>?, response: Response<TemperatureResponse>?) {
                 runOnUiThread {
-                    findViewById<TextView>(R.id.temperatureValue).setText(response!!.body()!!.temperature.toString())
+                    findViewById<TextView>(R.id.temperatureValue).text = response!!.body()!!.temperature.toString()
                 }
             }
         })

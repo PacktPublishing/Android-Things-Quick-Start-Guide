@@ -43,7 +43,7 @@ class LCDClockActivity : Activity() {
 
         Timer().schedule(timerTask {
             // Blink the colon
-            display.setColonEnabled(!display.colonEnabled)
+            display.colonEnabled = !display.colonEnabled
             // Update the values
             date.time = System.currentTimeMillis()
             display.display(dateFormat.format(date))

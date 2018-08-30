@@ -43,7 +43,7 @@ class PianoPwmActivity : Activity() {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        val freqToPlay = frequencies.get(keyCode)
+        val freqToPlay = frequencies[keyCode]
         if (freqToPlay != null) {
             buzzer.setPwmFrequencyHz(freqToPlay)
             buzzer.setEnabled(true)

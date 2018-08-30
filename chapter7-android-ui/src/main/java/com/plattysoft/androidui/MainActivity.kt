@@ -48,7 +48,7 @@ class MainActivity : Activity() {
         handler.post(object : Runnable {
             override fun run() {
                 val temperature = temperatureSensor.readTemperature()
-                temperatureValue.setText(temperature.toString())
+                temperatureValue.text = temperature.toString()
                 handler.postDelayed(this, 1000)
             }
         })
