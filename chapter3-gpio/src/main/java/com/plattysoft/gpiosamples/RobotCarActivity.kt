@@ -12,38 +12,38 @@ import com.plattysoft.l298n.MotorMode
  */
 class RobotCarActivity : Activity() {
 
-    private lateinit var mMotorController: L298N
+    private lateinit var motorController: L298N
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // PINS for the motor controller L298N
         // BCM22, BCM23, BCM24, BCM25
         //            mMotorController = L298N.open("BCM22", "BCM23", "BCM24", "BCM25")
-        mMotorController = L298N.open("GPIO2_IO00", "GPIO2_IO05",
+        motorController = L298N.open("GPIO2_IO00", "GPIO2_IO05",
                 "GPIO2_IO07", "GPIO6_IO15")
-        mMotorController.setMode(MotorMode.STOP)
+        motorController.setMode(MotorMode.STOP)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
         if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
-            mMotorController.setMode(MotorMode.FORWARD)
+            motorController.setMode(MotorMode.FORWARD)
         } else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
-            mMotorController.setMode(MotorMode.BACKWARD)
+            motorController.setMode(MotorMode.BACKWARD)
         } else if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
-            mMotorController.setMode(MotorMode.TURN_LEFT)
+            motorController.setMode(MotorMode.TURN_LEFT)
         } else if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
-            mMotorController.setMode(MotorMode.TURN_RIGHT)
+            motorController.setMode(MotorMode.TURN_RIGHT)
         }
         return super.onKeyDown(keyCode, event)
     }
 
     override fun onKeyUp(keyCode: Int, event: KeyEvent): Boolean {
-        mMotorController.setMode(MotorMode.STOP)
+        motorController.setMode(MotorMode.STOP)
         return super.onKeyUp(keyCode, event)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        mMotorController.close()
+        motorController.close()
     }
 }
