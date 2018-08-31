@@ -1,10 +1,10 @@
 package com.plattysoft.androidthingssamples.ledstrip
 
-import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import android.app.Activity
 import android.graphics.Color
-import com.google.android.things.contrib.driver.apa102.Apa102
 import android.os.Bundle
+import com.google.android.things.contrib.driver.apa102.Apa102
+import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import java.util.*
 import kotlin.concurrent.timerTask
 
@@ -18,7 +18,7 @@ class KnightRiderSimpleActivity : Activity() {
     private var currentPos = 0
     private val interval: Long = 100
 
-    val colors = IntArray(RainbowHat.LEDSTRIP_LENGTH)
+    private val colors = IntArray(RainbowHat.LEDSTRIP_LENGTH)
     private lateinit var ledStrip: Apa102
 
     override fun onCreate(savedInstanceState: Bundle?) {

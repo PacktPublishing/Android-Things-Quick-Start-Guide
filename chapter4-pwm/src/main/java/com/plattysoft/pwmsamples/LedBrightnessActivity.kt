@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.os.Handler
 import com.google.android.things.pio.PeripheralManager
 import com.google.android.things.pio.Pwm
-import java.util.*
-import kotlin.concurrent.timerTask
 
 /**
  * Created by Raul Portales on 13/05/18.
  */
-class LedBrightnessActivity: Activity() {
+class LedBrightnessActivity : Activity() {
 
     private val initialTime = System.currentTimeMillis()
     private lateinit var pwm: Pwm

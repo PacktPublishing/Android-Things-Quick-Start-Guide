@@ -6,7 +6,6 @@ import com.google.android.things.contrib.driver.ht16k33.Ht16k33
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 
 import java.util.Timer
-import java.util.TimerTask
 import kotlin.concurrent.timerTask
 
 /**
@@ -16,9 +15,9 @@ import kotlin.concurrent.timerTask
 class Marquee : AutoCloseable {
 
     companion object {
-        private val MARQUEE_INTERVAL: Long = 800
-        private val LCD_LENGTH = 4
-        val PADDING = "    "
+        private const val MARQUEE_INTERVAL: Long = 800
+        private const val LCD_LENGTH = 4
+        private const val PADDING = "    "
     }
 
     private var timer: Timer? = null
@@ -58,7 +57,7 @@ class Marquee : AutoCloseable {
 
     private fun updateMarquee() {
         // In this display, the character '.' does not count as such (unless consecutive)
-        // The length of the string to dispay depends on the number of dots there
+        // The length of the string to display depends on the number of dots there
         if (marqueeText[currentMarqueePos] == '.') {
             currentMarqueePos++
         }

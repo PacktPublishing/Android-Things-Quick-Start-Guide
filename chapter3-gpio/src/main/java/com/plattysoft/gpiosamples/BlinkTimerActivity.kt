@@ -16,9 +16,9 @@ class BlinkTimerActivity : Activity() {
         super.onCreate(savedInstanceState)
         led = PeripheralManager.getInstance().openGpio(BoardDefaults.ledR)
         led.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW)
-        timer.schedule ( timerTask {
+        timer.schedule(timerTask {
             led.value = !led.value
-        }, 0, 1000 )
+        }, 0, 1000)
     }
 
     override fun onDestroy() {

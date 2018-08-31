@@ -3,23 +3,22 @@ package com.plattysoft.androidthingssamples.temperatureDisplay
 import android.app.Activity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
+import com.google.android.things.contrib.driver.bmx280.Bmx280
+import com.google.android.things.contrib.driver.ht16k33.AlphanumericDisplay
 import com.google.android.things.contrib.driver.ht16k33.Ht16k33
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
-import com.google.android.things.contrib.driver.ht16k33.AlphanumericDisplay
-import com.google.android.things.contrib.driver.bmx280.Bmx280
 
 /**
  * Created by Raul Portales on 07/05/18.
  */
-class PressureDisplayActivity: Activity() {
+class PressureDisplayActivity : Activity() {
 
     private val handler = Handler()
 
     private lateinit var sensor: Bmx280
     private lateinit var alphanumericDisplay: AlphanumericDisplay
 
-    val displayPressureRunnable = object: Runnable {
+    private val displayPressureRunnable = object : Runnable {
         override fun run() {
             val pressure = sensor.readPressure().toDouble()
             alphanumericDisplay.display(pressure)

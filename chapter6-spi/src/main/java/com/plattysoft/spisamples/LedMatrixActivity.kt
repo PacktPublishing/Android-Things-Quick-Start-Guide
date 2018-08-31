@@ -11,26 +11,26 @@ class LedMatrixActivity : Activity() {
     private val SPI_BUS: String = BoardDefaults.spiHatBus
 
     private var currentSprite = 0
-    val sprites = arrayOf(
+    private val sprites = arrayOf(
             byteArrayOf(
-                0b00011000.toByte(),
-                0b00111100.toByte(),
-                0b01111110.toByte(),
-                0b11011011.toByte(),
-                0b11111111.toByte(),
-                0b00100100.toByte(),
-                0b01011010.toByte(),
-                0b10100101.toByte()
+                    0b00011000.toByte(),
+                    0b00111100.toByte(),
+                    0b01111110.toByte(),
+                    0b11011011.toByte(),
+                    0b11111111.toByte(),
+                    0b00100100.toByte(),
+                    0b01011010.toByte(),
+                    0b10100101.toByte()
             ),
-            byteArrayOf (
-                0b00011000.toByte(),
-                0b00111100.toByte(),
-                0b01111110.toByte(),
-                0b11011011.toByte(),
-                0b11111111.toByte(),
-                0b01011010.toByte(),
-                0b10000001.toByte(),
-                0b01000010.toByte()
+            byteArrayOf(
+                    0b00011000.toByte(),
+                    0b00111100.toByte(),
+                    0b01111110.toByte(),
+                    0b11011011.toByte(),
+                    0b11111111.toByte(),
+                    0b01011010.toByte(),
+                    0b10000001.toByte(),
+                    0b01000010.toByte()
             )
     )
 

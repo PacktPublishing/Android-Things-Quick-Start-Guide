@@ -11,12 +11,12 @@ import com.google.firebase.database.*
 
 class MainActivity : Activity() {
 
-    lateinit var redLed: Gpio
-    lateinit var temperatureSensor: Bmx280
+    private lateinit var redLed: Gpio
+    private lateinit var temperatureSensor: Bmx280
 
-    lateinit var firebaseReference: DatabaseReference
+    private lateinit var firebaseReference: DatabaseReference
 
-    val handler = Handler()
+    private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

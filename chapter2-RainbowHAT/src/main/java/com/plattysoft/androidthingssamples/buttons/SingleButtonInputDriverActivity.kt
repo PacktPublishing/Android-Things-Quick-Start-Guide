@@ -28,8 +28,7 @@ class SingleButtonInputDriverActivity : Activity() {
         if (keyCode == KEYCODE_A) {
             redLed.value = true
             return true
-        }
-        else {
+        } else {
             return super.onKeyDown(keyCode, event)
         }
     }
@@ -38,8 +37,7 @@ class SingleButtonInputDriverActivity : Activity() {
         if (keyCode == KEYCODE_A) {
             redLed.value = false
             return true
-        }
-        else {
+        } else {
             return super.onKeyUp(keyCode, event)
         }
     }

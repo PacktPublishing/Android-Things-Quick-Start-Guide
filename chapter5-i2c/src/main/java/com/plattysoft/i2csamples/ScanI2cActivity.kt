@@ -14,7 +14,7 @@ class ScanI2cActivity : Activity() {
         val defaultBus = I2cUtils.getBus()
         val activeAddresses = I2cUtils.scanAvailableAddresses(defaultBus)
         for (address in activeAddresses) {
-            Log.d("ScanI2cActivity", "Address found: 0x"+address.toString(16))
+            Log.d("ScanI2cActivity", "Address found: 0x${address.toString(16)}")
         }
     }
 }

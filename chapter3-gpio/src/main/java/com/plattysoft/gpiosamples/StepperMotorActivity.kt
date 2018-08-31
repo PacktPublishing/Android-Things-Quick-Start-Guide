@@ -12,6 +12,11 @@ import com.plattysoft.uln2003.motor.ULN2003StepperMotor
  * Created by Raul Portales on 19/05/18.
  */
 class StepperMotorActivity : Activity() {
+
+    companion object {
+        private val TAG = StepperMotorActivity::class.java.simpleName!!
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -31,9 +36,11 @@ class StepperMotorActivity : Activity() {
                     override fun onStarted() {
                         Log.i(TAG, "rotation started")
                     }
+
                     override fun onFinishedSuccessfully() {
                         Log.i(TAG, "rotation finished")
                     }
+
                     override fun onFinishedWithError(degreesToRotate: Double, rotatedDegrees: Double, exception: Exception) {
                         Log.e(TAG, "error, degrees to rotate: {$degreesToRotate}  rotated degrees: {$rotatedDegrees}")
                     }

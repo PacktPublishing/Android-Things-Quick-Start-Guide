@@ -4,11 +4,9 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.KeyEvent.*
-import com.google.android.things.contrib.driver.button.Button
 import com.google.android.things.contrib.driver.button.ButtonInputDriver
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
-import com.google.android.things.userdriver.input.InputDriver
 
 /**
  * Created by Raul Portales on 28/04/18.
@@ -44,8 +42,7 @@ class ButtonInputDriverActivity : Activity() {
         if (led != null) {
             led.value = true
             return true
-        }
-        else {
+        } else {
             return super.onKeyDown(keyCode, event)
         }
     }
@@ -55,8 +52,7 @@ class ButtonInputDriverActivity : Activity() {
         if (led != null) {
             led.value = false
             return true
-        }
-        else {
+        } else {
             return super.onKeyUp(keyCode, event)
         }
     }

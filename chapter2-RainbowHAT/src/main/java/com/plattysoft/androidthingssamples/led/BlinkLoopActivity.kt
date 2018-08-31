@@ -5,8 +5,6 @@ import android.os.Bundle
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
 
-private val TAG = BlinkLoopActivity::class.java.simpleName
-
 class BlinkLoopActivity : Activity() {
 
     private lateinit var led: Gpio

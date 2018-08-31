@@ -39,12 +39,11 @@ class PianoActivity : Activity() {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        val freqToPlay = frequencies.get(keyCode)
+        val freqToPlay = frequencies[keyCode]
         if (freqToPlay != null) {
             buzzer.play(freqToPlay)
             return true
-        }
-        else {
+        } else {
             return false
         }
     }

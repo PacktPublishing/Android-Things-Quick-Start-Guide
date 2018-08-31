@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : Activity() {
 
     lateinit var redLed: Gpio
-    lateinit var temperatureSensor : Bmx280
+    lateinit var temperatureSensor: Bmx280
 
     private val handler = Handler(Looper.getMainLooper())
 
@@ -39,8 +39,7 @@ class MainActivity : Activity() {
     }
 
     private fun configureLedSwitch() {
-        redLedSwitch.setOnCheckedChangeListener {
-            compoundButton: CompoundButton, b: Boolean ->
+        redLedSwitch.setOnCheckedChangeListener { compoundButton: CompoundButton, b: Boolean ->
             redLed.value = b
         }
     }
@@ -49,7 +48,7 @@ class MainActivity : Activity() {
         handler.post(object : Runnable {
             override fun run() {
                 val temperature = temperatureSensor.readTemperature()
-                temperatureValue.setText(temperature.toString())
+                temperatureValue.text = temperature.toString()
                 handler.postDelayed(this, 1000)
             }
         })

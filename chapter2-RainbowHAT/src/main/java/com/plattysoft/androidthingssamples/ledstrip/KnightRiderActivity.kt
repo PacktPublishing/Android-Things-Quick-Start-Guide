@@ -1,13 +1,13 @@
 package com.plattysoft.androidthingssamples.ledstrip
 
-import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import android.app.Activity
 import android.graphics.Color
-import com.google.android.things.contrib.driver.apa102.Apa102
-import com.google.android.things.contrib.driver.ht16k33.Ht16k33
 import android.os.Bundle
 import android.view.KeyEvent
+import com.google.android.things.contrib.driver.apa102.Apa102
 import com.google.android.things.contrib.driver.button.ButtonInputDriver
+import com.google.android.things.contrib.driver.ht16k33.Ht16k33
+import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import java.util.*
 import kotlin.concurrent.timerTask
 
@@ -18,8 +18,8 @@ import kotlin.concurrent.timerTask
 class KnightRiderActivity : Activity() {
 
     companion object {
-        private val MIN_INTERVAL = 25
-        private val MAX_INTERVAL = 400
+        private const val MIN_INTERVAL = 25
+        private const val MAX_INTERVAL = 400
     }
 
     private var timer: Timer? = null
@@ -65,12 +65,12 @@ class KnightRiderActivity : Activity() {
             }
         } else if (keyCode == KeyEvent.KEYCODE_B) {
             if (interval > MIN_INTERVAL) {
-                interval = interval / 2
+                interval /= 2
                 restartTimer()
             }
         } else if (keyCode == KeyEvent.KEYCODE_C) {
             if (interval < MAX_INTERVAL) {
-                interval = interval * 2
+                interval *= 2
                 restartTimer()
             }
         }

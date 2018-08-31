@@ -15,9 +15,9 @@ class BlinkTimerActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         led = RainbowHat.openLedGreen()
-        timer.schedule ( timerTask {
+        timer.schedule(timerTask {
             led.value = !led.value
-        }, 0, 1000 )
+        }, 0, 1000)
     }
 
     override fun onDestroy() {

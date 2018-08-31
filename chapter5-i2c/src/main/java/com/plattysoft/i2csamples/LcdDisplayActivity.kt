@@ -2,9 +2,7 @@ package com.plattysoft.i2csamples
 
 import android.app.Activity
 import android.os.Bundle
-import android.text.method.TextKeyListener.clear
 import com.nilhcem.androidthings.driver.lcdpcf8574.LcdPcf8574
-
 
 
 /**
@@ -13,7 +11,7 @@ import com.nilhcem.androidthings.driver.lcdpcf8574.LcdPcf8574
 class LcdDisplayActivity : Activity() {
 
     companion object {
-        const val I2C_ADDRESS = 0x27
+        private const val I2C_ADDRESS = 0x27
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

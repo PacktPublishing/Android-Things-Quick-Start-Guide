@@ -3,7 +3,6 @@ package com.plattysoft.androidthingssamples.led
 import android.app.Activity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
 
@@ -12,7 +11,7 @@ class BlinkHandlerActivity : Activity() {
     private lateinit var led: Gpio
     private val handler = Handler()
 
-    private val ledRunnable = object: Runnable {
+    private val ledRunnable = object : Runnable {
         override fun run() {
             led.value = !led.value
             handler.postDelayed(this, 1000)

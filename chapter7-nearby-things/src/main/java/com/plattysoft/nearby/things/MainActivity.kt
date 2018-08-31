@@ -26,8 +26,8 @@ class MainActivity : Activity() {
 
     private lateinit var nearbyConnections: ConnectionsClient
 
-    var connectedEndpoint: String? = null
-    val handler = Handler()
+    private var connectedEndpoint: String? = null
+    private val handler = Handler()
 
     private val payloadCallback= object: PayloadCallback() {
         override fun onPayloadReceived(p0: String, p1: Payload) {
@@ -43,7 +43,7 @@ class MainActivity : Activity() {
 
     private val connectionLifecycleCallback= object : ConnectionLifecycleCallback (){
         override fun onConnectionResult(endpointId: String, result: ConnectionResolution) {
-            if (result.getStatus().getStatusCode() == STATUS_OK) {
+            if (result.status.statusCode == STATUS_OK) {
                 connectedEndpoint = endpointId
             }
         }
@@ -53,7 +53,7 @@ class MainActivity : Activity() {
             }
         }
         override fun onConnectionInitiated(endpointId: String, connectionInfo: ConnectionInfo) {
-            nearbyConnections.acceptConnection(endpointId, payloadCallback);
+            nearbyConnections.acceptConnection(endpointId, payloadCallback)
         }
     }
 

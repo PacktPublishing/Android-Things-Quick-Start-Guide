@@ -3,8 +3,6 @@ package com.plattysoft.i2csamples
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.view.ViewGroup
 import com.plattysoft.mpu6050.Mpu6050
 
 /**
@@ -13,7 +11,7 @@ import com.plattysoft.mpu6050.Mpu6050
 class Mpu6050Activity : Activity() {
 
     companion object {
-        const val TAG = "Mpu6050SampleActivity"
+        private const val TAG = "Mpu6050Activity"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

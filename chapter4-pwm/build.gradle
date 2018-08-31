@@ -39,5 +39,5 @@ dependencies {
     implementation 'com.google.android.things.contrib:driver-button:+'
     implementation 'com.google.android.things.contrib:driver-ht16k33:+'
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

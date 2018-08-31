@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var firebaseReference: DatabaseReference
+    private lateinit var firebaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 runOnUiThread {
                     val temperature = snapshot.getValue(Double::class.java)
-                    temperatureValue.setText(temperature.toString())
+                    temperatureValue.text = temperature.toString()
                 }
             }
             override fun onCancelled(p0: DatabaseError) {

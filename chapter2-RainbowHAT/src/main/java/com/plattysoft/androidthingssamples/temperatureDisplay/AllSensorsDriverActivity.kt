@@ -15,9 +15,9 @@ import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 /**
  * Created by Raul Portales on 07/05/18.
  */
-class AllSensorsDriverActivity : Activity(){
+class AllSensorsDriverActivity : Activity() {
 
-    val sensorCallback = object : SensorManager.DynamicSensorCallback() {
+    private val sensorCallback = object : SensorManager.DynamicSensorCallback() {
         override fun onDynamicSensorConnected(sensor: Sensor?) {
             if (sensor?.type == Sensor.TYPE_AMBIENT_TEMPERATURE) {
                 registerTemperatureListener(sensor)
@@ -28,9 +28,9 @@ class AllSensorsDriverActivity : Activity(){
         }
     }
 
-    val temperatureSensorListener = object : SensorEventListener {
+    private val temperatureSensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
-            Log.i(TAG, "Temperature changed: " + event.values[0])
+            Log.i(TAG, "temperature changed: ${event.values[0]}")
         }
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
@@ -38,9 +38,9 @@ class AllSensorsDriverActivity : Activity(){
         }
     }
 
-    val pressureSensorListener = object : SensorEventListener {
+    private val pressureSensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
-            Log.i(TAG, "pressure changed: " + event.values[0])
+            Log.i(TAG, "pressure changed: ${event.values[0]}")
         }
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
@@ -48,13 +48,13 @@ class AllSensorsDriverActivity : Activity(){
         }
     }
 
-    lateinit var sensorManager : SensorManager
-    lateinit var sensorDriver : Bmx280SensorDriver
+    private lateinit var sensorManager: SensorManager
+    private lateinit var sensorDriver: Bmx280SensorDriver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sensorDriver = RainbowHat.createSensorDriver()
-        sensorDriver.registerTemperatureSensor();
+        sensorDriver.registerTemperatureSensor()
         sensorDriver.registerPressureSensor()
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager

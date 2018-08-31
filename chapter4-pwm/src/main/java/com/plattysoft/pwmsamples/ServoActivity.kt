@@ -12,7 +12,7 @@ import com.google.android.things.contrib.driver.pwmservo.Servo
 /**
  * Created by Raul Portales on 13/05/18.
  */
-class ServoActivity: Activity() {
+class ServoActivity : Activity() {
 
     private lateinit var buttonA: ButtonInputDriver
     private lateinit var buttonB: ButtonInputDriver
@@ -43,7 +43,7 @@ class ServoActivity: Activity() {
         buttonC.register()
     }
 
-     override fun onDestroy() {
+    override fun onDestroy() {
         super.onDestroy()
 
         servo.close()
@@ -69,7 +69,7 @@ class ServoActivity: Activity() {
         return super.onKeyMultiple(keyCode, repeatCount, event)
     }
 
-    private fun handleKeyCode(keyCode: Int): Boolean{
+    private fun handleKeyCode(keyCode: Int): Boolean {
         when (keyCode) {
             KEYCODE_A -> {
                 decreaseAngle()

@@ -2,7 +2,6 @@ package com.plattysoft.i2csamples
 
 import com.google.android.things.pio.PeripheralManager
 import java.io.IOException
-import java.util.*
 
 /**
  * Created by Raul Portales on 26/05/18.

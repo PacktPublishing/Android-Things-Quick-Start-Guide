@@ -15,9 +15,9 @@ import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 /**
  * Created by Raul Portales on 07/05/18.
  */
-class TemperatureSensorDriverActivity : Activity(){
+class TemperatureSensorDriverActivity : Activity() {
 
-    val sensorCallback = object : SensorManager.DynamicSensorCallback() {
+    private val sensorCallback = object : SensorManager.DynamicSensorCallback() {
         override fun onDynamicSensorConnected(sensor: Sensor?) {
             if (sensor?.type == Sensor.TYPE_AMBIENT_TEMPERATURE) {
                 registerTemperatureListener(sensor)
@@ -25,9 +25,9 @@ class TemperatureSensorDriverActivity : Activity(){
         }
     }
 
-    val temperatureSensorListener = object : SensorEventListener {
+    private val temperatureSensorListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
-            Log.i(TAG, "Temperature changed: " + event.values[0])
+            Log.i(TAG, "temperature changed: ${event.values[0]}")
         }
 
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
@@ -35,8 +35,8 @@ class TemperatureSensorDriverActivity : Activity(){
         }
     }
 
-    lateinit var sensorManager : SensorManager
-    lateinit var sensorDriver : Bmx280SensorDriver
+    private lateinit var sensorManager: SensorManager
+    private lateinit var sensorDriver: Bmx280SensorDriver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +45,7 @@ class TemperatureSensorDriverActivity : Activity(){
         sensorManager.registerDynamicSensorCallback(sensorCallback)
 
         sensorDriver = RainbowHat.createSensorDriver()
-        sensorDriver.registerTemperatureSensor();
+        sensorDriver.registerTemperatureSensor()
     }
 
     private fun registerTemperatureListener(sensor: Sensor) {

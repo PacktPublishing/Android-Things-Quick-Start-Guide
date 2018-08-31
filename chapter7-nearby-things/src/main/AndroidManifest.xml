@@ -15,7 +15,7 @@
     <application>
         <uses-library android:name="com.google.android.things" />
 
-        <activity android:name="com.plattysoft.nearby.things.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

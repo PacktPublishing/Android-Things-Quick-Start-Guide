@@ -1,4 +1,4 @@
-package com.plattysoft.androidthingssamples
+package com.plattysoft.pwmsamples
 
 import android.app.Activity
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.KeyEvent.*
 import com.google.android.things.contrib.driver.button.Button
 import com.google.android.things.contrib.driver.button.ButtonInputDriver
 import com.google.android.things.contrib.driver.pwmspeaker.Speaker
-import com.google.android.things.pio.Gpio
 import com.plattysoft.pwmsamples.BoardDefaults
 
 /**
@@ -41,12 +40,11 @@ class PianoSpeakerActivity : Activity() {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        val freqToPlay = frequencies.get(keyCode)
+        val freqToPlay = frequencies[keyCode]
         if (freqToPlay != null) {
             buzzer.play(freqToPlay)
             return true
-        }
-        else {
+        } else {
             return false
         }
     }
