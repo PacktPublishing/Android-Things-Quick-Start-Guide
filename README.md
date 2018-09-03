@@ -72,7 +72,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 Click on the following link to see the Code in Action:
 
-[Placeholder link](http://bit.ly/2C4VX1M)
+[http://bit.ly/2C4VX1M](http://bit.ly/2C4VX1M)
 
 ### Related products
 * Android Things Projects [[Packt]](https://www.packtpub.com/hardware-and-creative/android-things-projects?utm_source=github&utm_medium=repository&utm_campaign=9781787289246) [[Amazon]](https://www.amazon.com/dp/1787289249)
