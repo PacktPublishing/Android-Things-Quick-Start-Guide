@@ -89,7 +89,7 @@ Raul's love for electronics reignited when Google announced Android Things. He s
 
 
 ## Other books by the authors
-* [stering Android Game Development][[Packt]](https://www.packtpub.com/game-development/mastering-android-game-development?utm_source=github&utm_medium=repository&utm_campaign=9781783551774)
+* [Mastering Android Game Development][[Packt]](https://www.packtpub.com/game-development/mastering-android-game-development?utm_source=github&utm_medium=repository&utm_campaign=9781783551774)
 * [Android: Programming for Developers][[Packt]](https://www.packtpub.com/game-development/android-game-programming?utm_source=github&utm_medium=repository&utm_campaign=9781787128583)
 
 ### Suggestions and Feedback
