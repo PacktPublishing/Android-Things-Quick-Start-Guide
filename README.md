@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/android-things-quick-start-guide/9781789341799)
------
-*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789341795).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # Android Things QuickStart Guide
 
 <a href="https://www.packtpub.com/hardware-and-creative/android-things-quick-start-guide?utm_source=github&utm_medium=repository&utm_campaign=9781789341799"><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11219_cover_0.png" alt="Android Things QuickStart Guide" height="256px" align="right"></a>
