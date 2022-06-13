@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B11219?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 # Android Things QuickStart Guide
 
 <a href="https://www.packtpub.com/hardware-and-creative/android-things-quick-start-guide?utm_source=github&utm_medium=repository&utm_campaign=9781789341799"><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11219_cover_0.png" alt="Android Things QuickStart Guide" height="256px" align="right"></a>
